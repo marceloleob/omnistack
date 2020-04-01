@@ -4,9 +4,9 @@ module.exports = {
 
 	/**
 	 * Executa o login de uma ONG
-	 * 
-	 * @param {*} request 
-	 * @param {*} response 
+	 *
+	 * @param {*} request
+	 * @param {*} response
 	 */
 	async create(request, response) {
 		const { id } = request.body;
@@ -21,7 +21,7 @@ module.exports = {
 				error: 'Nenhuma ONG encontrada com este ID.'
 			});
 		}
-
+//console.log(ngo['name']);
 		return response.json({ ngo });
 	}
 }
